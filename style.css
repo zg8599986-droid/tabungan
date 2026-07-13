@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:420px;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+header h1{
+    font-size:28px;
+    font-weight:700;
+}
+
+#darkMode{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    backdrop-filter:blur(10px);
+    transition:.3s;
+}
+
+#darkMode:hover{
+    transform:rotate(25deg) scale(1.1);
+}
+
+/* KARTU ATM */
+
+.card{
+    background:linear-gradient(135deg,#2563eb,#4f46e5,#7c3aed);
+    border-radius:25px;
+    padding:25px;
+    color:#fff;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+    position:relative;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-60px;
+    right:-60px;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    bottom:-50px;
+    left:-40px;
+}
+
+.chip{
+    width:60px;
+    height:45px;
+    background:linear-gradient(#ffd54f,#ffb300);
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    font-weight:400;
+}
+
+.card h1{
+    margin:15px 0;
+    font-size:34px;
+}
+
+.card-footer{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+.card-footer small{
+    opacity:.8;
+}
+
+.card-footer h3{
+    font-size:15px;
+    margin-top:5px;
+}
+
+/* BOX */
+
+.target,
+.action,
+.statistik,
+.riwayat{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:18px;
+    color:#fff;
+}
+
+/* PROGRESS */
+
+.progress{
+    height:18px;
+    background:rgba(255,255,255,.2);
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#00ff95,#00d4ff,#7c3aed);
+    border-radius:20px;
+    transition:.5s;
+}
+
+#persen{
+    text-align:right;
+    font-weight:bold;
+}
+
+/* INPUT */
+
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+/* BUTTON */
+
+.buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+button{
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+#btnTambah{
+    background:#10b981;
+    color:white;
+}
+
+#btnKurang{
+    background:#f59e0b;
+    color:white;
+}
+
+#btnTransfer{
+    background:#3b82f6;
+    color:white;
+}
+
+#btnReset{
+    background:#ef4444;
+    color:white;
+}
+
+/* STATISTIK */
+
+.statistik{
+    display:flex;
+    gap:12px;
+}
+
+.box{
+    flex:1;
+    text-align:center;
+    padding:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,.08);
+}
+
+.box h3{
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.box h2{
+    color:#00ff95;
+}
+
+/* RIWAYAT */
+
+.riwayat h2{
+    margin-bottom:15px;
+}
+
+#history{
+    list-style:none;
+    max-height:220px;
+    overflow-y:auto;
+}
+
+#history li{
+    padding:12px;
+    background:rgba(255,255,255,.08);
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00d4ff;
+    border-radius:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:480px){
+
+.card h1{
+    font-size:28px;
+}
+
+.buttons{
+    grid-template-columns:1fr;
+}
+
+.statistik{
+    flex-direction:column;
+}
+
+header h1{
+    font-size:22px;
+}
+
+}
